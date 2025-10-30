@@ -134,7 +134,7 @@ app.MapPost("/anime", [Authorize] (Anime anime, AnimeService service) =>
 {
     anime.Id = service.GetAnimes().Max(a => a.Id) + 1;
     service.AddAnime(anime);
-    return Results.Created($"/animes/{anime.Id}", anime);
+    return Results.Created($"/anime/{anime.Id}", anime);
 })
 .WithName("AddAnime")
 .WithOpenApi();
