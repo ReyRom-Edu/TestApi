@@ -97,7 +97,7 @@ app.MapPost("/token", (string username, HttpContext context) =>
     return Results.Ok(new { Token = token });
 
 })
-.WithName("Token")
+.WithName("Login")
 .WithOpenApi();
 
 
